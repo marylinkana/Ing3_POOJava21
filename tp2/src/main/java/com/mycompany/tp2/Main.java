@@ -58,7 +58,5 @@ public class Main {
         System.out.print("p3 ");
         p3.afficher();
         
-        
-        
     }
 }
