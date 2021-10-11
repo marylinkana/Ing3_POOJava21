@@ -42,10 +42,8 @@ public class Liste {
     }
     
     public void Ajouter(Object obj){
-        if (myList.isEmpty())
-            myList.add(obj);
-        else 
-            myList.add(position, obj);
+        //attention: on ajoute à la suite de l'élément sur lequel on est positionné
+        myList.add(position+1, obj);
     }
 
     void afficher() {

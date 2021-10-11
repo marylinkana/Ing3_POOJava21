@@ -21,7 +21,7 @@ public class Main {
                 p_intermediare = new PileEntiers();
         
         //initialisation
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 10; i++)
             p1.Empiler((int) (Math.random()*100));
         
         // affichage
@@ -35,11 +35,11 @@ public class Main {
         p3.afficher();
         
         //1- depiler dans une pile intermediaire
-        for (int i = 0; i < 5; i++) //pour retourver (plus loin) les élements dans le meme ordre que dans 1
+        for (int i = 0; i < 10; i++) //pour retourver (plus loin) les élements dans le meme ordre que dans 1
             p_intermediare.Empiler(p1.Depiler());
         
         //2- empiler ensuite en vérifiant si pair
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             int elem = p_intermediare.Depiler();
             p1.Empiler(elem);
             if (elem % 2 == 0) //pair
