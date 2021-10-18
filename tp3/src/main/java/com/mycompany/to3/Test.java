@@ -4,6 +4,8 @@
  */
 package com.mycompany.to3;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -17,16 +19,37 @@ public class Test {
      */
     public static void main(String[] args) {
         System.out.println("Test fonctionne");
-        Carre c = new Carre();
+        Carre c1 = new Carre();
         Scanner s = new Scanner(System.in);
         System.out.println("donner la longueur ");
         
         try {
             double longeur = s.nextDouble();
-            if (longeur < 0){
-                LongNegativeException myEx = new LongNegativeException();
-                throw myEx;
-            }
+            if (longeur < 0)
+                throw new LongNegativeException();
+            
+            Carre c2 = new Carre(longeur);
+
+            Carre c3 = new Carre(c2);
+            
+            System.out.println("c1  " + c1.getSurface());
+            System.out.println("c2  " + c2.getSurface());
+            System.out.println("c3  " + c3.getSurface());
+            
+            ArrayList<Forme> list = new ArrayList<>();
+            list.add(new Carre(7));
+            list.add(new Carre(3));
+            list.add(new Carre(5));
+            
+   
+            System.out.println(list);
+            
+            Collections.sort(list);
+            
+            System.out.println(list);
+            
+            
+            
         } catch (LongNegativeException e) {
             System.out.println(e);
         } 
