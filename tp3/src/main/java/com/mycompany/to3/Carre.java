@@ -33,13 +33,17 @@ public class Carre extends Forme {
     }
     
     
-    
-    
-    
-    
     @Override
     double getSurface() {
         return longueur*longueur;
     }
+
+    @Override
+    public String toString() {
+        return new String("la longueur du carré est " + longueur); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+    
     
 }

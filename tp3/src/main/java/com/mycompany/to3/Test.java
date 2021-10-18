@@ -4,6 +4,8 @@
  */
 package com.mycompany.to3;
 
+import java.util.Scanner;
+
 /**
  *
  * @author amaaradji
@@ -15,6 +17,24 @@ public class Test {
      */
     public static void main(String[] args) {
         System.out.println("Test fonctionne");
+        Carre c = new Carre();
+        Scanner s = new Scanner(System.in);
+        System.out.println("donner la longueur ");
+        
+        try {
+            double longeur = s.nextDouble();
+            if (longeur < 0){
+                LongNegativeException myEx = new LongNegativeException();
+                throw myEx;
+            }
+        } catch (LongNegativeException e) {
+            System.out.println(e);
+        } 
+        catch (Exception e) {
+            System.out.println("attention exception");
+        }
+        
+        
     }
     
 }
