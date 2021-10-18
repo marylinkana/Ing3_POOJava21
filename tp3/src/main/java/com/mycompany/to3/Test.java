@@ -48,6 +48,10 @@ public class Test {
             
             System.out.println(list);
             
+            myComparator comparator = new myComparator();
+            
+            Collections.sort(list, comparator);
+            
             
             
         } catch (LongNegativeException e) {

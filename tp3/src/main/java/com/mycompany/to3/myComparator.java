@@ -10,22 +10,15 @@ import java.util.Comparator;
  *
  * @author amaaradji
  */
-public abstract class Forme implements Comparable<Forme>{
-    double x, y;
-    abstract double getSurface();
+public class myComparator implements Comparator<Forme>{
 
     @Override
-    public int compareTo(Forme other) {
-        if(this.getSurface() == other.getSurface())
+    public int compare(Forme o1, Forme o2) {
+        if(o1.getSurface() == o2.getSurface())
             return 0;    
-        else if (this.getSurface() > other.getSurface())
+        else if (o1.getSurface() > o2.getSurface())
             return 1;    
         else    
-            return -1;    
-    
+            return -1;
     }
-    
-
-
 }
-
