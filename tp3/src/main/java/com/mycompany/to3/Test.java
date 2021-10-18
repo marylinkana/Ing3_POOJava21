@@ -54,20 +54,22 @@ public class Test {
             
             Collections.sort(list, comparator);
             
-            Forme f1 = list.get(list.size()-1); // l'élément avec la plus grande surface
+            // l'élément avec la plus grande surface est le dernier élement de la liste
+            Forme f1 = list.get(list.size()-1); 
             System.out.println(f1.toString());
             
             //tri selon distance de l'origine
             ArrayList<Forme> list2 = new ArrayList<>();
-            list2.add(new Carre(0, 0, 7));
-            list2.add(new Carre(10, 8, 3));
-            list2.add(new Carre(-3, 0, 5));
+            list2.add(new Carre(0, 0, 7));//coordonnées du centre de la forme 0, 0
+            list2.add(new Carre(10, 8, 3));//coordonnées du centre de la forme 10, 8
+            list2.add(new Carre(-3, 0, 5));//coordonnées du centre de la forme -3, 0
             
             myComparatorDistanceOrigine comparatorDis = new myComparatorDistanceOrigine();
             Collections.sort(list2, comparatorDis);
             
-            Forme f2 = list2.get(list2.size()-1); // l'élément le plus éloigné de l'origine
-            System.out.println("coordonnées "+ f2.x + " " + f2.y);
+            // l'élément le plus éloigné de l'origine est le dernier élément de la liste
+            Forme f2 = list2.get(list2.size()-1); 
+            System.out.println("coordonnées x=" + f2.x + " y=" + f2.y);
             
             
             
