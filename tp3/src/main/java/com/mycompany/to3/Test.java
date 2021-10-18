@@ -48,9 +48,27 @@ public class Test {
             
             System.out.println(list);
             
+            
+            //tri selon Surface
             myComparator comparator = new myComparator();
             
             Collections.sort(list, comparator);
+            
+            Forme f1 = list.get(list.size()-1); // l'élément avec la plus grande surface
+            System.out.println(f1.toString());
+            
+            //tri selon distance de l'origine
+            ArrayList<Forme> list2 = new ArrayList<>();
+            list2.add(new Carre(0, 0, 7));
+            list2.add(new Carre(10, 8, 3));
+            list2.add(new Carre(-3, 0, 5));
+            
+            myComparatorDistanceOrigine comparatorDis = new myComparatorDistanceOrigine();
+            Collections.sort(list2, comparatorDis);
+            
+            Forme f2 = list2.get(list2.size()-1); // l'élément le plus éloigné de l'origine
+            System.out.println("coordonnées "+ f2.x + " " + f2.y);
+            
             
             
             

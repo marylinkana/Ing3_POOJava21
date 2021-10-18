@@ -43,6 +43,11 @@ public class Carre extends Forme {
         return new String("la longueur du carré est " + longueur); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    double getDistanceOrigine() {
+        return Math.sqrt( x*x + y*y );
+    }
+
     
     
     
