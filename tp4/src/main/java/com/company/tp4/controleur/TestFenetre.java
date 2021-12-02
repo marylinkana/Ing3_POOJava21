@@ -21,9 +21,7 @@ public class TestFenetre {
         ModeleFenetre modelF = new ModeleFenetre();
         modelF.saisirFen();
         
-        MaFenetre mf = new MaFenetre(modelF.getLarg(), 
-                modelF.getHaut(), 
-                modelF.getTitre());
+        MaFenetre mf = new MaFenetre(modelF.getLarg(),modelF.getHaut(),modelF.getTitre());
         mf.setVisible(true);
         
         

@@ -18,6 +18,7 @@ public class MaFenetre extends JFrame {
         setSize(300, 150); // donne une taille en hauteur et largeur à la fenêtre
         setTitle("Ma premiere fenetre"); // donne un titre à la fenêtre
     }
+    
      public MaFenetre (int largeur, int hauteur, String titre) { // constructeur
         setSize(largeur, hauteur); // donne une taille en hauteur et largeur à la fenêtre
         setTitle(titre); // donne un titre à la fenêtre
