@@ -30,7 +30,7 @@ public class Clic1 extends MouseAdapter {
         Clic1 myController = new Clic1();
         
         myController.fen = new VueFenetre(myController);
-        myController.fen.setSize(500, 150);
+        myController.fen.setSize(java.lang.Math.abs(500), 150);
         myController.fen.setVisible(true);
         
     }
