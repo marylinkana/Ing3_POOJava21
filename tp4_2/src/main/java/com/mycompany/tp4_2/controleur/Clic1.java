@@ -8,17 +8,20 @@ import com.mycompany.tp4_2.modele.ModeleSouris;
 import com.mycompany.tp4_2.vue.VueFenetre;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 /**
  *
  * @author amaaradji
  */
-public class Clic1 extends MouseAdapter {
+public class Clic1  extends MouseAdapter{
 
     ModeleSouris ms; 
     VueFenetre fen;
     
+    @Override
     public void mouseClicked(MouseEvent me) { 
+        me.getSource();
         ms = new ModeleSouris(me.getX(), me.getY());
         fen.afficherSouris(ms.getMouse_x(), ms.getMouse_y());
     };
@@ -34,6 +37,8 @@ public class Clic1 extends MouseAdapter {
         myController.fen.setVisible(true);
         
     }
+
+
     
     
     
